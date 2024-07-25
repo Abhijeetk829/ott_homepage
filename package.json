@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "moment": "^2.30.1",
+    "resize-observer-polyfill": "^1.5.1",
+    "simplebar": "^6.2.7",
+    "uuid": "^10.0.0",
+    "webpack": "^5.93.0"
+  },
+  "name": "ott_homepage",
+  "description": "OTT oculus app homepage",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhijeetk829/ott_homepage.git"
+  },
+  "author": "Abhijeet Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abhijeetk829/ott_homepage/issues"
+  },
+  "homepage": "https://github.com/Abhijeetk829/ott_homepage#readme"
+}

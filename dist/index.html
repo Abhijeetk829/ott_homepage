@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap demo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <style>
+            html, body {
+                margin: 0;
+                color: white;
+            }
+            .carousal_ {
+                background-image: url("images/johannes-plenio-RwHv7LgeC7s-unsplash.jpg");
+                background-attachment: fixed;
+            }
+            .base_ {
+                background: linear-gradient(45deg, rgba(5,18,38,1) 50%, rgba(33,23,59,0.9668242296918768) 61%, rgba(55,27,75,0.8827906162464986) 67%, rgba(255,255,255,0) 100%);
+                background-attachment: fixed;
+            }
+            .nav-link {
+                color: white!important;
+            }
+            body::-webkit-scrollbar {
+                display: none;
+            }
+            body::-webkit-scrollbar, .section::-webkit-scrollbar {
+                width: 12px !important;
+            }
+            body::-webkit-scrollbar-thumb, .section::-webkit-scrollbar-thumb {
+                background-color: rgba(255, 255, 255, 0.25) !important;    /* color of the scroll thumb */
+                border-radius: 20px !important;       /* roundness of the scroll thumb */
+            }
+            body::-webkit-scrollbar-track-piece, .section::-webkit-scrollbar-track-piece {
+                background: rgba(0, 0, 0, 0) !important;
+            }
+            .blur {
+                backdrop-filter: blur(2px);
+            }
+            .opacity {
+                opacity: 0.75;
+            }
+            .hover {
+                transition: all 150ms ease-in-out;
+                border-radius: 6%;
+            }
+            .hover:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+            .hover:hover img {
+                opacity: 1;
+            }
+            #clock {
+                background: rgba(0 , 0 , 0, 0.5);
+                backdrop-filter: blur(5px);
+                border-radius: 5px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="carousal_">
+            <div class="base_">
+                <div class="container-fluid py-3 px-5">
+
+                    <!-- navbar -->
+                    <nav class="navbar navbar-expand-lg text-white">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#"><span class="fs-2 text-white fw-bold">OTT</span></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled" aria-disabled="true">Social <small>(Coming Soon)</small></a>
+                                    </li>
+                                </ul>
+                                <div class="font-monospace d-flex" id="clock"></div>
+                            </div>
+                        </div>
+                    </nav>
+        
+                    <!-- Recommendation -->
+                    <div class="container-fluid mt-5">
+                        <small class="ott-name fw-semibold">Unsplash</small>
+                        <div class="fs-3 movie-name fw-bold">
+                            Mystery Forest Light
+                        </div>
+                        <p class="description">
+                            Photo by Johannes Plenio
+                        </p>
+                    </div>
+        
+                    <!-- Apps -->
+                    <div class="container-fluid mt-5">
+                        <div class="app-list" id="app-list"></div>
+                    </div>
+        
+                    <nav class="mt-5 text-center p-3">
+                        <strong>OTT |</strong>
+                        <small> © OTT 2023</small>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="dist.js"></script>
+    </body>
+</html>
