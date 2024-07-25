@@ -11,7 +11,7 @@ const compiler1 = webpack({
     entry: "./src/app.js",
     output: {
         filename: "dist.js",
-        path: resolve(__dirname, "./dist/")
+        path: resolve(__dirname, "./docs/")
     }
 })
 
