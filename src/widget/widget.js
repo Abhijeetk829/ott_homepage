@@ -1,0 +1,34 @@
+import { google } from "./google.js";
+import { homePage } from "./home.js";
+
+class Widget {
+    constructor() {
+        this.div = document.createElement('div');
+        this.styleDiv();
+        document.body.appendChild(this.div);
+    }
+    styleDiv() {
+        this.div.style.position = "fixed";
+        this.div.style.height = "auto";
+        this.div.style.transition = "all 100ms ease-in-out";
+        this.div.style.zIndex = "100";
+        this.div.style.bottom = "10px";
+        this.div.style.right = "10px";
+        this.div.style.left = "10px";
+        this.div.classList.add("d-flex", "justify-content-center");
+    }
+    registerComponent({name, icon, click}) {
+        const comp = document.createElement('div');
+        comp.style.background = "rgba(0,0,0,0.35)";
+        comp.style.borderRadius = "5px";
+        comp.style.margin = "0 10px";
+        comp.style.cursor = "pointer";
+        comp.componentName = name;
+        comp.innerHTML = icon;
+        this.div.appendChild(comp);
+        comp.addEventListener('click', click);
+    }
+}
+
+const widget = new Widget();
+widget.registerComponent(homePage);
