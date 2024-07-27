@@ -8,9 +8,9 @@ export const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const compiler1 = webpack({
     mode: "production",
-    entry: "./src/home.js",
+    entry: "./src/app.js",
     output: {
-        filename: "home.js",
+        filename: "dist.js",
         path: resolve(__dirname, "./docs/")
     }
 })

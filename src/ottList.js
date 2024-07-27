@@ -153,6 +153,13 @@ const ottList = [
         "color": "#1AB7EA",
         "tag": "broadcasts"
     },
+    {
+        "name": 'chrome',
+        "url": "chrome://components",
+        "logo": "vimeo.png",
+        "color": "#1AB7EA",
+        "tag": "broadcasts"
+    },
 ];
 
 const categories = [
