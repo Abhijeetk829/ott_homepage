@@ -155,7 +155,7 @@ const ottList = [
     },
     {
         "name": 'chrome',
-        "url": "chrome://components",
+        "url": "https://shaka-player-demo.appspot.com/support.html",
         "logo": "vimeo.png",
         "color": "#1AB7EA",
         "tag": "broadcasts"
