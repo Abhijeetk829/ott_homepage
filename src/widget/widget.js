@@ -15,7 +15,8 @@ class Widget {
         this.div.style.bottom = "-100px";
         this.div.style.right = "10px";
         this.div.style.left = "10px";
-        this.div.classList.add("d-flex", "justify-content-center");
+        this.div.style.display = "flex";
+        this.div.style.justifyContent = "center";
     }
     registerComponent({name, icon, click}) {
         const comp = document.createElement('div');
