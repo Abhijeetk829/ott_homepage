@@ -30,19 +30,27 @@ class Widget {
     }
     listenToPointerEvents() {
         const tt = this;
-        window.vuplex.addEventListener('message', function(event) {
-            alert(event.data)
-            if (typeof event.data == 'string') {
-                const data = JSON.parse(event.data);
-                if (data.type == "pointer") {
-                    if (data.data == "out") {
-                        tt.div.style.bottom = "-100px";
-                    }   else if (data.data == "in") {
-                        tt.div.style.bottom = "10px";
+        if (window.vuplex) {
+            addMessageListener();
+        } else {
+            window.addEventListener('vuplexready', addMessageListener);
+        }
+        
+        function addMessageListener() {
+            window.vuplex.addEventListener('message', function(event) {
+                let json = event.data;
+                if (typeof json == 'string') {
+                    const data = JSON.parse(json);
+                    if (data.type == "pointer") {
+                        if (data.data == "out") {
+                            tt.div.style.bottom = "-100px";
+                        }   else if (data.data == "in") {
+                            tt.div.style.bottom = "10px";
+                        }
                     }
                 }
-            }
-        })
+            });
+        }
     }
 }
 
