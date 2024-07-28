@@ -30,7 +30,7 @@ class Widget {
     }
     listenToPointerEvents() {
         const tt = this;
-        window.addEventListener('message', function(event) {
+        window.vuplex.addEventListener('message', function(event) {
             alert(event.data)
             if (typeof event.data == 'string') {
                 const data = JSON.parse(event.data);
