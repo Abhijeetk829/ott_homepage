@@ -1,4 +1,3 @@
-import { google } from "./google.js";
 import { homePage } from "./home.js";
 
 class Widget {
@@ -6,13 +5,14 @@ class Widget {
         this.div = document.createElement('div');
         this.styleDiv();
         document.body.appendChild(this.div);
+        this.listenToPointerEvents();
     }
     styleDiv() {
         this.div.style.position = "fixed";
         this.div.style.height = "auto";
         this.div.style.transition = "all 100ms ease-in-out";
         this.div.style.zIndex = "100";
-        this.div.style.bottom = "10px";
+        this.div.style.bottom = "-100px";
         this.div.style.right = "10px";
         this.div.style.left = "10px";
         this.div.classList.add("d-flex", "justify-content-center");
@@ -27,6 +27,22 @@ class Widget {
         comp.innerHTML = icon;
         this.div.appendChild(comp);
         comp.addEventListener('click', click);
+    }
+    listenToPointerEvents() {
+        const tt = this;
+        window.addEventListener('message', function(event) {
+            alert(event.data)
+            if (typeof event.data == 'string') {
+                const data = JSON.parse(event.data);
+                if (data.type == "pointer") {
+                    if (data.data == "out") {
+                        tt.div.style.bottom = "-100px";
+                    }   else if (data.data == "in") {
+                        tt.div.style.bottom = "10px";
+                    }
+                }
+            }
+        })
     }
 }
 

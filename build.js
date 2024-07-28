@@ -12,7 +12,7 @@ const compiler1 = webpack({
     entry: "./src/widget/widget.js",
     output: {
         // filename: "app.js",
-        filename: "home.js",
+        filename: "widget.js",
         path: resolve(__dirname, "./docs/")
     }
 })
